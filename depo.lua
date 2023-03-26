@@ -90,15 +90,6 @@ while true do
         connect()
         sleep(30000)
     end
-    if getBot().status ~= "online" then
-        sendDC()
-        sleep(1000)
-        while getBot().status ~= "online" do
-            sleep(10000)
-        end
-        sendDC()
-        sleep(2000)
-    end
     sendHooks()
-    sleep(60000)
+    sleep(60000 * 5)
 end
