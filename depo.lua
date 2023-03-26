@@ -80,7 +80,7 @@ function sendHooks()
     wh = {}
     wh.url = whUpdate.."/messages/"..msgId.."?wait=true"
     wh.username = "BOT CHECKER"
-    wh.embed = '{"author": {"name": "Status Bot Depo","icon_url": "https://i.imgur.com/NqepEJ8.png"}, "fields": [{"name": "Bot Name","value": "'.. getBot().name ..'","inline": "true"},{"name": "Status","value": "'.. desc ..'","inline": "true"}], "footer": {"text": "Last Update : '..time..'"}, "color": "'..colors..'"}'
+    wh.embed = '{"description": "Last Updated : <t:'..os.time()..':R>", "author": {"name": "Status Bot Depo","icon_url": "https://i.imgur.com/NqepEJ8.png"}, "fields": [{"name": "Bot Name","value": "'.. getBot().name ..'","inline": "true"},{"name": "Status","value": "'.. desc ..'","inline": "true"}], "footer": {"text": "Last Update : '..time..'"}, "color": "'..colors..'"}'
     wh.edit = true
     webhook(wh)
 end
