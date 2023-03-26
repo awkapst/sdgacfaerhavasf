@@ -62,15 +62,16 @@ addHook("Donate", hook)
 function sendDC()
     wh = {}
     wh.url = whRecon
+    wh.username = "BOT CHECKER"
     wh.content = "<@515505041810128901> BOT Deposit "..getBot().status
     webhook(wh)
 end
 
 function sendHooks()
     if getBot().status == "online" then
-        desc = "<a:online:999318145212891260> "..getBot().status
+        desc = getBot().status
     else
-        desc = "<:offline:999318133863108629> "..getBot().status
+        desc = getBot().status
     end
     colors = math.random(1111111,9999999)
     os.time()
@@ -78,7 +79,8 @@ function sendHooks()
 
     wh = {}
     wh.url = whUpdate.."/messages/"..msgId.."?wait=true"
-    wh.embed = '{"author": {"name": "Status Bot Depo","icon_url": "https://i.imgur.com/NqepEJ8.png"}, "fields": [{"name": "Bot Name","value": "<:bot:1006699383674380349> '.. getBot().name ..'","inline": "true"},{"name": "Status","value": "'.. desc ..'","inline": "true"}], "footer": {"text": "Last Update : '..time..'"}, "color": "'..colors..'"}'
+    wh.username = "BOT CHECKER"
+    wh.embed = '{"author": {"name": "Status Bot Depo","icon_url": "https://i.imgur.com/NqepEJ8.png"}, "fields": [{"name": "Bot Name","value": "'.. getBot().name ..'","inline": "true"},{"name": "Status","value": "'.. desc ..'","inline": "true"}], "footer": {"text": "Last Update : '..time..'"}, "color": "'..colors..'"}'
     wh.edit = true
     webhook(wh)
 end
