@@ -4,7 +4,7 @@ local function Send(player,jumlah)
         logDB(data)
     end
 end
-
+ 
 function debug(text)
     local filewrite = io.open("debug.txt", "a+")
     filewrite:write(text.."\n")
