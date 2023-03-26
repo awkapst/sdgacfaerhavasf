@@ -91,5 +91,5 @@ while true do
         sleep(30000)
     end
     sendHooks()
-    sleep(10000)
+    sleep(30000)
 end
