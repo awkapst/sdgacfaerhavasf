@@ -45,4 +45,5 @@ function hook(varlist)
     end
 end
 
+bot = getBot()
 bot:addHook(hook,varlist)
